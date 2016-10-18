@@ -3,3 +3,6 @@ weatherVisualization - add map that pinpoints city loc
 weatherVisualization - add animations for snow/ clear
 use github to host this website
 add html/css to make look better
+
+
+MAKE WEATHER ACTUALLY WORK IN BROWSER
