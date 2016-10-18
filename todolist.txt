@@ -1,0 +1,5 @@
+(weather url    http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2ffe122d91a7b2a3048f838649fbf8eb&units=imperial)
+weatherVisualization - add map that pinpoints city loc
+weatherVisualization - add animations for snow/ clear
+use github to host this website
+add html/css to make look better
