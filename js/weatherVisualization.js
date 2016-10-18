@@ -8,6 +8,7 @@ function setup() {
   createCanvas(600, 600);
   cloud = loadImage("images/cloud.png");
   input = createInput();
+  loadJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=2ffe122d91a7b2a3048f838649fbf8eb&units=imperial", gotData);
 
   for(var i = 0; i < 100; i++){
   raindrops[i] = new raindrop();
@@ -37,7 +38,7 @@ function gotData(data) {
 
 
 function draw() {
-  loadJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=2ffe122d91a7b2a3048f838649fbf8eb&units=imperial", gotData);
+
 
 
   if (weatherData) {
@@ -69,5 +70,6 @@ function draw() {
 
 function newCity() {
   city = input.value();
+  loadJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=2ffe122d91a7b2a3048f838649fbf8eb&units=imperial", gotData);
 
 }
