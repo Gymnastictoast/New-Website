@@ -10,27 +10,27 @@ function setup() {
   input = createInput();
 
   for(var i = 0; i < 100; i++){
-  raindrops[i] = {
-  x: random(width),
-  y: random(height),
-  speed: random(2),
-  show: function(){
+  raindrops[i] = new raindrop();
+  }
+}
+
+function raindrop(){
+  this.x = random(width);
+  this.y = random(height);
+  this.speed = random(2);
+  this.show = function(){
     fill(0,50,200);
     ellipse(this.x, this.y, 6, 6);
   },
-  fall: function(){
+  this.fall = function(){
     this.y += this.speed;
   },
-  reset: function(){
+  this.reset = function(){
     if(this.y >= height){
       this.y = 0;
-    }
   }
-};
 }
 }
-
-
 function gotData(data) {
   weatherData = data;
 }
