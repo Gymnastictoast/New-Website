@@ -54,6 +54,11 @@ function draw() {
       image(cloud, 220,300);
     }
 
+    if(weatherData.weather[0].main == "Clear"){
+      fill(255,255,10);
+      ellipse(450,100,130,130);
+    }
+
     if(weatherData.weather[0].main == "Rain"){
     for(var i = 0; i < raindrops.length; i++){
     raindrops[i].show();
@@ -62,6 +67,8 @@ function draw() {
     }
   }
 
+    fill(100,240,100);
+    rect(0,height-130,width,130);
     textSize(50);
     strokeText("It is currently " + weatherData.main.temp, 0, height / 2 - 50, 0, 255);
     strokeText(" degrees in " + city, 0, height / 2 + 50, 0, 255);
