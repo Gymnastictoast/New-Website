@@ -10,7 +10,6 @@ PVector defaults = new PVector(0,0);
 void setup(){
   size(800,800);
   stroke(255);
-  noFill();
   numberOfPoints = 7;
   drawPoints(numberOfPoints);
   shortestPath = 1000000;
@@ -33,7 +32,9 @@ void drawPoints(int numPoints){
     points.add(new PVector(random(width),random(60, height)));
     PVector point = points.get(i);
     strokeWeight(15);
-    point(point.x,point.y);
+    fill(0);
+    ellipse(point.x,point.y,5,5);
+    noFill();
     strokeWeight(2);
   }
 }
@@ -79,7 +80,7 @@ void checkPath(){
   int dist5 = int(dist(point5.x,point5.y,point6.x,point6.y));
   int dist6 = int(dist(point6.x,point6.y,point7.x,point7.y));
   int totalDistance = dist1 + dist2 + dist3 + dist4 + dist5 +  dist6;
-  println(totalDistance);
+  
   if(totalDistance < shortestPath){
     shortestPath = totalDistance;
     bestPath.set(0, point1);
