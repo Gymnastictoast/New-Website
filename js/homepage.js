@@ -15,7 +15,7 @@ function setup(){
   sliderGreen.style('width', '90px');
   sliderBlue = createSlider(0,255,255,1);
   sliderBlue.style('width', '90px');
-  createP("Set the RGB values for the sketch with above sliders")
+  createP("Set the RGB values for the sketch with above sliders.")
   for(var i = 0; i < 100; i++){
     bubbles[i] = new Bubble();
   }
