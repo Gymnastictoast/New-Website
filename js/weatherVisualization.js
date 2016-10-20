@@ -3,9 +3,11 @@ var city = "Anchorage";
 var input;
 var raindrops = [];
 var cloud;
+var canvas;
 
 function setup() {
-  createCanvas(600, 600);
+  canvas = createCanvas(600, 600);
+  canvas.position(500,0);
   cloud = loadImage("images/cloud.png");
   input = createInput();
   loadJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=2ffe122d91a7b2a3048f838649fbf8eb&units=imperial", gotData, "jsonp");
