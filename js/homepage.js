@@ -2,18 +2,28 @@ var canvas;
 var bubbles = [];
 var applyWindRight = false;
 var applyWindLeft = false;
+var sliderRed;
+var sliderGreen;
+var sliderBlue;
 
 function setup(){
   canvas = createCanvas(windowWidth-400,windowHeight-100);
   canvas.position(350,100);
-  fill(100,200,255);
+  sliderRed = createSlider(0,255,100,1);
+  sliderRed.style('width', '90px');
+  sliderGreen = createSlider(0,255,200,1);
+  sliderGreen.style('width', '90px');
+  sliderBlue = createSlider(0,255,255,1);
+  sliderBlue.style('width', '90px');
+  createP("Set the RGB values for the sketch with above sliders")
   for(var i = 0; i < 100; i++){
     bubbles[i] = new Bubble();
   }
 }
 
 function draw(){
-  background(255);
+  background(100);
+  fill(sliderRed.value(),sliderGreen.value(),sliderBlue.value());
   rect(0,0,width,10);
   rect(width-10,0,10,height);
   rect(0,0,10,height);
