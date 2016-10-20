@@ -11,7 +11,7 @@ function setup(){
   canvas.position(350,100);
   sliderRed = createSlider(0,255,100,1);
   sliderRed.style('width', '90px');
-  sliderGreen = createSlider(0,255,200,1);
+  sliderGreen = createSlider(0,255,160,1);
   sliderGreen.style('width', '90px');
   sliderBlue = createSlider(0,255,255,1);
   sliderBlue.style('width', '90px');
@@ -22,7 +22,7 @@ function setup(){
 }
 
 function draw(){
-  background(100);
+  background(230);
   fill(sliderRed.value(),sliderGreen.value(),sliderBlue.value());
   rect(0,0,width,10);
   rect(width-10,0,10,height);
