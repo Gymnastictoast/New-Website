@@ -1,5 +1,5 @@
 var weatherData;
-var city = "Toronto";
+var city = "Anchorage";
 var input;
 var raindrops = [];
 var cloud;
@@ -44,14 +44,15 @@ function draw() {
   if (weatherData) {
     input.changed(newCity);
 
+    var grassCol = map(weatherData.main.temp, 0, 100, 130,200);
     var r = map(weatherData.main.temp, 0, 100, 0, 255);
     var b = map(weatherData.main.temp, 0, 100, 255, 0);
 
     background(r, 150, b);
 
     if(weatherData.weather[0].main == "Clouds"){
-      image(cloud, 70,95);
-      image(cloud, 220,300);
+      image(cloud, 70,20);
+      image(cloud, 220,180);
     }
 
     if(weatherData.weather[0].main == "Clear"){
@@ -67,7 +68,7 @@ function draw() {
     }
   }
 
-    fill(100,240,100);
+    fill(100,grassCol,100);
     rect(0,height-130,width,130);
     textSize(50);
     strokeText("It is currently " + weatherData.main.temp, 0, height / 2 - 50, 0, 255);
