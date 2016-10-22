@@ -3,8 +3,9 @@ weatherVisualization - add map that pinpoints city loc
 weatherVisualization - add animations for snow,  add sound
 home page js - random walkers (cover whole page - need to make links still work),
                     mouse interaction
+              put all sketches on home page- cycle through with links?
 
-add html/css to make look better  -  add color?
+add html/css to make look better  -
 
 
 
