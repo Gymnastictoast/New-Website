@@ -9,6 +9,7 @@ var sliderBlue;
 var clock;
 var button;
 var buttonCounter = 0;
+var buttonP;
 
 
 function setup() {
@@ -34,10 +35,15 @@ function setup() {
     }
 }
 
+
+
 function buttonPressed() {
     buttonCounter += 1;
     if (buttonCounter == 10) {
-        createP("Stop pressing the button....");
+        buttonP = createP("Stop pressing the button....");
+    }
+    if (buttonCounter == 30) {
+        buttonP.html("Really?");
     }
 }
 

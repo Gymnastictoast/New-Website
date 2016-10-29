@@ -6,17 +6,21 @@ var cloud;
 var canvas;
 
 function setup() {
-    canvas = createCanvas(windowWidth - 400, windowHeight - 50);
+    canvas = createCanvas(windowWidth - 400, windowHeight - 100);
     canvas.position(350, 100);
     cloud = loadImage("images/cloud.png");
+    clock = createP("" + hour() + " " + minute() + " " + second());
+    clock.position(1220, 5);
     input = createInput();
-    input.position(windowWidth - 920, windowHeight - 540);
+    input.position(188, windowHeight - 258);
     loadJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=2ffe122d91a7b2a3048f838649fbf8eb&units=imperial", gotData, "jsonp");
 
     for (var i = 0; i < 100; i++) {
         raindrops[i] = new raindrop();
     }
 }
+
+
 
 function raindrop() {
     this.x = random(width);
@@ -54,6 +58,7 @@ function draw() {
 
         background(r, 150, b);
 
+
         if (weatherData.weather[0].main == "Clouds") {
             image(cloud, 70, 20);
             image(cloud, 220, 180);
@@ -78,6 +83,12 @@ function draw() {
         textAlign(CENTER);
         strokeText("It is currently " + weatherData.main.temp, width / 2, height / 2 - 50, 0, 255);
         strokeText(" degrees in " + city, width / 2, height / 2 + 50, 0, 255);
+
+        rect(0, 0, width, 10);
+        rect(width - 10, 0, 10, height);
+        rect(0, 0, 10, height);
+        rect(0, height - 10, width, 10);
+        clock.html("" + hour() + " " + minute() + " " + second());
     }
 }
 
