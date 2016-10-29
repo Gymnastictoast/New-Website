@@ -61,7 +61,7 @@ function draw() {
 
         if (weatherData.weather[0].main == "Clouds") {
             image(cloud, 70, 20);
-            image(cloud, 220, 180);
+            image(cloud, 300, 70);
         }
 
         if (weatherData.weather[0].main == "Clear") {
