@@ -3,12 +3,12 @@ ArrayList<PVector> bestPath = new ArrayList<PVector>();
 
 int shortestPath;
 int numberOfPoints;
-boolean pause = true;
+boolean pause = false;
 PVector defaults = new PVector(0,0);
 
 
 void setup(){
-  size(800,800);
+  size(400,400);
   stroke(255);
   numberOfPoints = 7;
   drawPoints(numberOfPoints);
@@ -80,7 +80,7 @@ void checkPath(){
   int dist5 = int(dist(point5.x,point5.y,point6.x,point6.y));
   int dist6 = int(dist(point6.x,point6.y,point7.x,point7.y));
   int totalDistance = dist1 + dist2 + dist3 + dist4 + dist5 +  dist6;
-  
+
   if(totalDistance < shortestPath){
     shortestPath = totalDistance;
     bestPath.set(0, point1);
@@ -120,9 +120,10 @@ void checkPath(){
   endShape();
   stroke(255);
   strokeWeight(1);
-
-  textSize(30);
-  text("Shortest Path (Outlined in Red):  " + shortestPath + " Pixels",50,50);
+  fill(255,0,0);
+  textSize(15);
+  text("Shortest Path (Outlined in Red):  " + shortestPath + " Pixels",10,50);
+  noFill();
 }
 
 

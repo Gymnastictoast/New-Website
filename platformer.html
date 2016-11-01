@@ -9,13 +9,10 @@
             background-color: rgb(200, 200, 200);
             background-image: url("images/seigaiha.png");
           }
-        #mysketch {
-            /*margin: 0; */
-            display: flex;
-            /* This centers our sketch horizontally. */
-            justify-content: center;
-            /* This centers our sketch vertically. */
-            align-items: center;
+        canvas {
+          position: absolute;
+          left: 400px;
+          top: 100px;
         }
 
         h1 {
@@ -41,12 +38,15 @@
     <h1>My name is Noah Hunt-Isaak and these are some things I made.</h1>
     <br><br>
     <h2>Things made with Processing:</h2>
-    <a href="platformer.html">Platformer Game</a>
+    <p>That Thing ------------------------------></p>
     <br>
     <a href="travellingSalesperson.html">Travelling Salesperson Simulation</a>
     <h2>Things made with p5.js:</h2>
     <a href="weather.html">Weather Visualization</a>
+    <br>
+    <a href="index.html">Home</a>
     <canvas id="mysketch" data-processing-sources="pde/Platformer.pde"></canvas>
+
 
 </body>
 
