@@ -91,6 +91,7 @@ function draw() {
         rect(0, 0, 10, height);
         rect(0, height - 10, width, 10);
         clock.html("" + hour() + " " + minute() + " " + second());
+        fix.html(" ");
     }
 }
 
