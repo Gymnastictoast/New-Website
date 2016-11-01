@@ -1,12 +1,8 @@
 (weather url    http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2ffe122d91a7b2a3048f838649fbf8eb&units=imperial)
 weatherVisualization - add map that pinpoints city loc
 weatherVisualization - add animations for snow,  add sound
-home page js - random walkers (cover whole page - need to make links still work),
-                    mouse interaction
-              put all sketches on home page- cycle through with links?
-
-add html/css to make look better  -
+home page js -    mouse interaction
+            put all sketches on home page- cycle through with links?
 
 
-
-MAKE WEATHER WORK W/O CROSS ORIGIN SCRIPT ISSUE
+MAKE WEATHER WORK W/O CROSS ORIGIN SCRIPT ISSUE (or at least explain how to fix)

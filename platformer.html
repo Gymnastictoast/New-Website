@@ -8,15 +8,24 @@
         body {
             background-color: rgb(200, 200, 200);
             background-image: url("images/seigaiha.png");
+            margin: 0;
+            display: flex;
+            /* This centers our sketch horizontally. */
+            justify-content: center;
+            /* This centers our sketch vertically. */
+            align-items: center;
         }
+
         h1 {
             text-shadow: 1px 1px 1px #ccc;
         }
-        h2{
+
+        h2 {
             text-shadow: 1px 1px 1px #ccc;
         }
-        p{
-          text-shadow: 1px 1px 1px #ccc;
+
+        p {
+            text-shadow: 1px 1px 1px #ccc;
         }
     </style>
 
@@ -36,13 +45,6 @@
     <h2>Things made with p5.js:</h2>
     <a href="weather.html">Weather Visualization</a>
     <canvas id="mysketch" data-processing-sources="pde/Platformer.pde"></canvas>
-
-    <script type="text/javascript">
-        var main = document.getElementById("mysketch");
-        var render = main.getContext("2d");
-        main.style.left = 500;
-        main.style.top = 500;
-    </script>
 
 </body>
 
