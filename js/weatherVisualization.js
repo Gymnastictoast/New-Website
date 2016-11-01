@@ -9,6 +9,8 @@ function setup() {
     canvas = createCanvas(windowWidth - 400, windowHeight - 100);
     canvas.position(350, 100);
     cloud = loadImage("images/cloud.png");
+    fix = createP("(Click shield above and allow unsafe scripts)");
+    fix.position(900,5);
     clock = createP("" + hour() + " " + minute() + " " + second());
     clock.position(1220, 5);
     input = createInput();
