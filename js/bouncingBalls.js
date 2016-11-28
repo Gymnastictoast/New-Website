@@ -21,9 +21,9 @@ function setup() {
 
     sliderRed = createSlider(0, 255, 0, 1);
     sliderRed.style('width', '90px');
-    sliderGreen = createSlider(0, 255, 0, 1);
+    sliderGreen = createSlider(0, 255, 190, 1);
     sliderGreen.style('width', '90px');
-    sliderBlue = createSlider(0, 255, 0, 1);
+    sliderBlue = createSlider(0, 255, 250, 1);
     sliderBlue.style('width', '90px');
     createP("Set the RGB values for the sketch with above sliders.")
 

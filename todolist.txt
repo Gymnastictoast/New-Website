@@ -2,7 +2,7 @@
 weatherVisualization - add map that pinpoints city loc
 weatherVisualization - add animations for snow,  add sound
 home page js -    mouse interaction
-            put all sketches on home page- cycle through with links?
+add animations with animate.css and  jquery  (NEED TO LEARN JQUERY FIRST)
 
 
 MAKE WEATHER WORK W/O CROSS ORIGIN SCRIPT ISSUE (or at least explain how to fix)
