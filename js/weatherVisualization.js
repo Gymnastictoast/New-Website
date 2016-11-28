@@ -1,5 +1,5 @@
 var weatherData;
-var city = "Anchorage";
+var city = "London";
 var input;
 var raindrops = [];
 var cloud;
@@ -68,7 +68,7 @@ function draw() {
 
         if (weatherData.weather[0].main == "Clear") {
             fill(255, 255, 10);
-            ellipse(450, 100, 130, 130);
+            ellipse(650, 100, 130, 130);
         }
 
         if (weatherData.weather[0].main == "Rain") {
