@@ -23,9 +23,9 @@ function setup() {
     sliderRed.style('width', '90px');
     sliderGreen = createSlider(0, 255, 100, 1);
     sliderGreen.style('width', '90px');
-    sliderBlue = createSlider(0, 255, 250, 1);
+    sliderBlue = createSlider(0, 255, 190, 1);
     sliderBlue.style('width', '90px');
-    createP("Set the RGB values for the sketch with above sliders.")
+    createP("Set the RGB values for the sketch with sliders.")
 
     button = createButton("This button does nothing!");
     button.mousePressed(buttonPressed);
@@ -48,7 +48,7 @@ function buttonPressed() {
 }
 
 function draw() {
-    background(100);
+    background(0);
     clock.html("" + hour() + " " + minute() + " " + second());
     fill(sliderRed.value(), sliderGreen.value(), sliderBlue.value());
 
@@ -59,14 +59,10 @@ function draw() {
 
     if (applyWindRight == true) {
         text("WIND", 20, 55);
-        line(50, 50, 100, 50);
-        line(100, 50, 75, 70);
-        line(100, 50, 75, 30);
+        triangle(60,40,60,60,150,50);
     } else if (applyWindLeft == true) {
-        text("WIND", 100, 55);
-        line(50, 50, 100, 50);
-        line(50, 50, 75, 70);
-        line(50, 50, 75, 30);
+        text("WIND", 120, 55);
+        triangle(110,40,110,60,20,50);
     } else {
         text("Press Spacebar for wind!", 20, 55);
     }
@@ -122,21 +118,21 @@ function Bubble() {
         }
 
     this.checkEdges = function() {
-        if (this.y >= (height - 10)) {
+        if (this.y >= (height - (10+this.diam))) {
             this.ySpeed = -this.ySpeed;
-            this.y = height - 11;
+            this.y = height - (11+this.diam);
         }
         if (this.y <= (10)) {
             this.ySpeed = -this.ySpeed;
             this.y = 11;
         }
-        if (this.x >= (width - 10)) {
+        if (this.x >= (width - (10+this.diam))) {
             this.xSpeed = -this.xSpeed;
-            this.x = width - 11;
+            this.x = width - (11+this.diam);
         }
-        if (this.x <= (10)) {
+        if (this.x <= (10+this.diam)) {
             this.xSpeed = -this.xSpeed;
-            this.x = 11;
+            this.x = (11+this.diam);
         }
     }
 }
